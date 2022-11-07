@@ -56,11 +56,20 @@ INSERT INTO `question` (`questionId`, `question`) VALUES
 -- Dumping structure for table questionnaireproject.user
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
-  `userId` int(11) NOT NULL,
-  `email` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `userId` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`userId`)
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table questionnaireproject.user: ~0 rows (approximately)
+-- Dumping data for table questionnaireproject.user: ~7 rows (approximately)
+INSERT INTO `user` (`userId`, `email`) VALUES
+	(1, 'ma@ya.com'),
+	(2, 'dsas@s.c'),
+	(3, 'dREAas@s.c'),
+	(23, ''),
+	(50, 'asdsa'),
+	(51, '5454weds'),
+	(52, '565');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
