@@ -20,7 +20,7 @@ public class UserController {
     @Autowired
     QuestionRepo questionRepo;
 
-
+    int i=1;
     @PostMapping("/addUser")
     public String getUserEmail(@RequestParam String email, Model model){
         System.out.println("User email:"+email);
@@ -28,7 +28,8 @@ public class UserController {
         userRepo.save(user);
         List<Question>  questionsList=questionRepo.findAll();
         System.out.println(questionsList);
-        model.addAttribute("questionList",questionsList);
+        model.addAttribute("questionList",questionsList.get(i));
+        i++;
         return "questions";
     }
 }
