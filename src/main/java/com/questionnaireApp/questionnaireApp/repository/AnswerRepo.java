@@ -1,9 +1,10 @@
 package com.questionnaireApp.questionnaireApp.repository;
 
+import com.questionnaireApp.questionnaireApp.model.Answer;
 import com.questionnaireApp.questionnaireApp.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AnswerRepo extends JpaRepository<User,Integer> {
+public interface AnswerRepo extends JpaRepository<Answer,Integer> {
 }
