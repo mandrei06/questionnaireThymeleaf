@@ -21,6 +21,7 @@ public class UserController {
 
     @Autowired
     QuestionRepo questionRepo;
+
     @Autowired
     AnswerRepo answerRepo;
     List<Question> questionsList;
@@ -28,6 +29,7 @@ public class UserController {
 
     Integer userId;
     int maxSize;
+
     @PostMapping("/addUser")
     public String getUserEmail(@RequestParam String email, Model model){
         System.out.println("User email:"+email);
@@ -35,7 +37,8 @@ public class UserController {
         userRepo.save(user);
         questionsList=questionRepo.findAll();
         maxSize = questionsList.size();
-        userId = user.getUserId();
+        userId=user.getUserId();
+        System.out.println(questionsList);
         model.addAttribute("questionList",questionsList.get(i));
         i++;
         return "questions";
@@ -50,6 +53,7 @@ public class UserController {
         if (i==maxSize+1){
             return "end";
         }
+
 
         return "questions";
     }
