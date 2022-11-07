@@ -21,11 +21,14 @@ public class Answer {
     private Integer userId;
     private String answer;
 
-    public Answer(Integer questionId,Integer userId,String answer) {
-        this.questionId=questionId;
-        this.userId=userId;
-        this.answer=answer;
+    public Answer(Integer questionId, Integer userId, String answer) {
+        this.questionId = questionId;
+        this.userId = userId;
+        this.answer = answer;
     }
+
+
+
 }
 
 
