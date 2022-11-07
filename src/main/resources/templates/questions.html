@@ -6,7 +6,7 @@
 </head>
 <body>
 <div style="width:200px; margin:0 auto; margin-top:250px;">
-    <form>
+    <form action="/answerQuestion" method="POST">
         <li th:text="${questionList.question}"></li>
         <input name="answer" id="answer" placeholder="answer" required>
         <button style="margin-top: 20px;color: white; margin-left: 70px; background-color:#3f50b5">Next</button>
