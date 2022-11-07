@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Main Page</title>
 </head>
 <body>
+    <div style = "width:200px; margin:0 auto; margin-top:250px;">
+        <form name = "emailForm" th:action = "@{/addUser}" th:object = "${userToAdd}" method="post">
+        <label for = "emailInput">
+            Please enter your email:</label>
+        <br>
+        <br>
+        <input id = "emailInput" required>
+        <br>
+        <br>
+        <input type = "submit" value="Submit">
+        </form>
+    </div>
 
 </body>
 </html>
